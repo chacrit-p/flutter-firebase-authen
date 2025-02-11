@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "171886106266",
+    "project_id": "fluuter-authen",
+    "storage_bucket": "fluuter-authen.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171886106266:android:dbcd093ef88d5873a77123",
+        "android_client_info": {
+          "package_name": "com.example.cool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMfRTcLEbatWr4C-eXSmNOycp9UmXMRQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171886106266:android:318fb691e3fb6f2ba77123",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMfRTcLEbatWr4C-eXSmNOycp9UmXMRQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

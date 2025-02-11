@@ -15,7 +15,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool _isLoading = false;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  /// ฟังก์ชั่นสำหรับสร้างแอคเคาท์ใหม่
   void _signUp() async {
     if (_passwordController.text != _confirmPasswordController.text) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -29,16 +28,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
     });
 
     try {
-      // สร้างแอคเคาท์ใหม่ด้วย email และ password
       await _auth.createUserWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      // แจ้งเตือนผู้ใช้งานเมื่อสร้างแอคเคาท์สำเร็จ
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("สร้างแอคเคาท์สำเร็จ กรุณาเข้าสู่ระบบ")),
       );
-      // กลับไปที่หน้าล็อกอิน
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       String message = e.message ?? "เกิดข้อผิดพลาด";

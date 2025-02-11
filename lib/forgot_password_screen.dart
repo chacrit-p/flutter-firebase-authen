@@ -13,7 +13,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   bool _isLoading = false;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  /// ฟังก์ชั่นสำหรับการรีเซ็ตรหัสผ่าน
   void _resetPassword() async {
     setState(() {
       _isLoading = true;

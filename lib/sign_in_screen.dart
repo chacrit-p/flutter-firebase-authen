@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home_screen.dart';  // ไปที่หน้า HomeScreen หลังจากเข้าสู่ระบบสำเร็จ
+import 'home_screen.dart'; // ไปที่หน้า HomeScreen หลังจากเข้าสู่ระบบสำเร็จ
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -15,7 +15,6 @@ class _SignInScreenState extends State<SignInScreen> {
   bool _isLoading = false;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  /// ฟังก์ชั่นสำหรับเข้าสู่ระบบ
   void _signIn() async {
     setState(() {
       _isLoading = true;
@@ -26,7 +25,6 @@ class _SignInScreenState extends State<SignInScreen> {
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      // เมื่อเข้าสู่ระบบสำเร็จ ให้เปลี่ยนไปที่หน้าหลัก (HomeScreen)
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const HomeScreen()),
